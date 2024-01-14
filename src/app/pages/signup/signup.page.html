@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form [formGroup]="regForm">
+    <ion-item lines="full">
+      <ion-label position="floating">Fullname</ion-label>
+      <ion-input type="text" formControlName="fullname" ></ion-input>
+      <div *ngIf="this.regForm.controls?.['fullname'].touched && this.regForm.controls?.['fullname'].invalid">
+        <ion-text>
+          Fullname is required
+        </ion-text>
+      </div>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" formControlName="email" ></ion-input>
+      <div *ngIf="this.regForm.controls?.['email'].touched && this.regForm.controls?.['email'].invalid">
+        <ion-text>
+          email is required
+        </ion-text>
+      </div>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" formControlName="password" ></ion-input>
+      <div *ngIf="this.regForm.controls?.['password'].touched && this.regForm.controls?.['password'].invalid">
+        <ion-text>
+          password is required
+        </ion-text>
+      </div>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-button  (click)="signUp()" color="danger" expand="block">Sign Up</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "dev-test-c9cb4": {
+      "hosting": {
+        "app": [
+          "dev-test-c9cb4"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "dev-test-c9cb4"
+  }
+}
